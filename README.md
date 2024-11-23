@@ -109,16 +109,24 @@ S(t)=Amplified Signal
 3. Noise Signal:
 
 ○ Let N(t) represent the noise added to the signal, which is typically generated
-using a Gaussian distribution: N(t)=noise_amplitude×randn(size(S(t)))This
+using a Gaussian distribution: N(t)=noise_amplitude×randn(size(S(t)))
+
+This
 simulates Gaussian noise scaled by the specified noise amplitude.
 
 a)Combined Noisy Signal:
-○ The resulting noisy signal Y(t)Y(t)Y(t) can be expressed as: Y(t)=S(t)+N(t)Y(t) =
+
+○ The resulting noisy signal Y(t) can be expressed as: Y(t)=S(t)+N(t)Y(t) =
 S(t) + N(t)Y(t)=S(t)+N(t)
+
+
 ○ This equation indicates that the noisy signal is the sum of the amplified signal and
 the noise
+
 ● S(t): The amplified signal from the MEMS microphone.
+
 ● N(t): The noise generated (Gaussian distributed) and scaled by the desired amplitude.
+
 ● Y(t): The combined signal, which is the noisy version of the original amplified signal.
 
 Amplification
@@ -126,14 +134,20 @@ Amplification
 Signal acquisition captures the weak signal.and Amplification
 strengthens the weak signal, ensuring it is at a high enough voltage to be
 processed in later stages like noise reduction and filtering.
+
 Weak Signal from MEMS Microphone:
+
 ● The MEMS microphone converts sound pressure into a low-voltage electrical signal,
 typically in the millivolt range, which is too weak for direct processing.
+
 Operational Amplifier (Op-Amp):
+
 ● An Op-Amp is used to amplify these weak signals, often configured as a
 non-inverting amplifier. This setup boosts the signal’s amplitude for effective
 processing.
+
 Gain Calculation:
+
 ● The gain of a non-inverting Op-Amp is calculated as:
 Gain=1+Rf/R1
 After generating the input signal, the
@@ -141,10 +155,16 @@ amplification step boosts it using the gain of
 the operational amplifier (Op-Amp).
 The formula for amplification is: Amplified
 Signal=Gain×Input Signal
+
+
 Amplified Signal= Gain * input signal
+
 ● The boosted signal is easier to process and analyze in
 subsequent stages, such as noise filtering and
-analysisFiltering and Final Model Development
+analysis
+
+Filtering and Final Model Development
+
 Filtering:A bandpass filter is applied to the amplified signal to remove unwanted frequencies. The
 filter allows frequencies between 20 Hz and 200 Hz (the typical range for heart sounds) to pass
 through while blocking others
@@ -152,9 +172,24 @@ through while blocking others
 frequency (200 Hz). The filter order (6) controls the steepness of the filter's response.
 Butterworth Filter design involves calculating coefficients based on the cutoff frequency
 and filter order.
+
 Filter Design Formula (Butterworth Filter)::The normalized cutoff frequency Wc is
 calculated as, Wc=2Fc/Fs
 Given a desired cutoff frequency Fc, sampling frequency Fs , and filter order NNN, the
 normalized cutoff frequency Wc can be calculated as
+
+Conclusion
+
+MEMS-based mechanical stethoscopes mark a major leap forward in medical technology
+by overcoming the limitations of traditional stethoscopes. Through the integration of
+Micro-Electro-Mechanical Systems, these devices provide superior sound detection,
+higher sensitivity, and digital signal processing for clearer, more accurate readings. This
+advancement enhances the ability of healthcare professionals to diagnose conditions
+more precisely, especially in cases where subtle physiological sounds are critical. As
+healthcare becomes more technology-driven, MEMS-based stethoscopes will play a key
+role in improving diagnostic practices, ensuring better outcomes for patients. This shift
+toward more advanced, portable, and efficient medical devices signals a promising
+future in medical diagnostics, where technology like MEMS continues to redefine the
+tools clinicians rely on
 
 
