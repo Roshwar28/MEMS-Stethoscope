@@ -1,6 +1,8 @@
 # MEMS-Stethoscope
 "Design and Implementation of a MEMS-Based Mechanical Stethoscope using MATLAB."
 
+This is a Raw fresh topic no one has initiated this topic
+
 Problem Statement:
 
 Traditional stethoscopes struggle with sensitivity, sound clarity, and
